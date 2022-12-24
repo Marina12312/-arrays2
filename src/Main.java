@@ -31,21 +31,20 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > max) {
                 max = arr[i];
-                if (arr[i] < min)
+            } else if (arr[i] < min) {
                     min = arr[i];
-                System.out.println("Максимальная сумма трат за день составила" + max + "рублей.Минимальная сумма трат за день составила" + min);
+                    System.out.println("Максимальная сумма трат за день составила" + max + "рублей.Минимальная сумма трат за день составила" + min);
+                }
             }
         }
-    }
+
 
     private static void task3() {
         int[] arr = generateRandomArray();
         int sum = 0;
-        int day = 30;
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
-            sum = sum / day;
-            System.out.println("Средняя сумма трат за месяц составила" + sum + "рублей");
+            System.out.println("Средняя сумма трат за месяц составила" + sum / arr.length + "рублей");
         }
     }
 
@@ -53,7 +52,6 @@ public class Main {
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length -1; i >= 0; i--) {
                 System.out.print(reverseFullName[i]);
-
             }
     }
 }
